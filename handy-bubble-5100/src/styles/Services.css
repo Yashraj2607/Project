@@ -1,0 +1,30 @@
+
+.Heading{
+    text-align: center;
+}
+
+.mapdiv{
+    width: 240px;
+    height: 300px;
+    border: 1px solid red;
+
+}
+
+.mapdiv>img{
+    width: 240px;
+
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+    margin-left: 20px;
+
+}
+
+.mapdiv>button{
+  
+    background: linear-gradient(90deg, rgba(253,29,29,0.9220938375350141) 32%, rgba(252,69,137,0.9697128851540616) 67%);
+   
+}
