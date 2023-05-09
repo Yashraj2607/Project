@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import "../styles/Services.css"
 import Footer from "./Footer";
+import {useNavigate } from "react-router-dom";
 
 const getData = async (page,search) => {
     try {
@@ -27,7 +28,11 @@ function Service(){
     const [isError, setError] = useState(false);
     const [search,setSearch] = useState("")
     const [price,setPrice]=useState("")
-
+    const navigate = useNavigate()
+  
+  function pay(){
+    navigate(`/Contact`)
+  }
     console.log(search)
     useEffect(() => {
         fetchAndUpdateData();
@@ -115,7 +120,7 @@ function Service(){
              <h5 style={{marginTop:"-5px"}}>Titlr:-{ele.title}</h5>
             
             <p style={{marginTop:"-18px"}}>Description:-{ele.message}</p>
-            <button onClick={()=>console.log("Yes")} style={{marginBottom:"0px"}}>{ele.button}</button>
+            <button onClick={()=>pay()} style={{marginBottom:"0px"}}>{ele.button}</button>
             <p style={{marginTop:"-1px"}}>Price:-{ele.price}</p>
            
            </div>
